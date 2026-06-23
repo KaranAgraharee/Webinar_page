@@ -67,7 +67,7 @@ export async function apiRequest(path, options = {}) {
       method,
       headers,
       body: body !== undefined ? JSON.stringify(body) : undefined,
-      credentials: 'include',
+      // credentials: 'include',
       redirect: 'manual',
     })
 
