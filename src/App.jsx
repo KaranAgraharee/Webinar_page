@@ -14,6 +14,7 @@ import AdminLogin from './pages/AdminLogin.jsx'
 import AdminDashboard from './pages/AdminDashboard.jsx'
 import ProtectedAdminRoute from './component/ProtectedAdminRoute.jsx'
 import RegistrationSuccess from './pages/RegistrationSuccess.jsx'
+import RegistrationSuccessGuard from './component/RegistrationSuccessGuard.jsx'
 import './App.css'
 
 function WebinarPage() {
@@ -28,13 +29,13 @@ function WebinarPage() {
         <Header />
 
         <main>
-          {/* <Hero />
+          <Hero />
           <Features />
           <TruthLearn />
           <Testimonial />
           <Social_Media />
           <Faq />
-          <CtaSection /> */}
+          <CtaSection />
         </main>
 
         <Footer />
@@ -50,8 +51,15 @@ function App() {
         {/* Public webinar page */}
         <Route path="/" element={<WebinarPage />} />
 
-        {/* Registration success page */}
-        <Route path="/registration-success" element={<RegistrationSuccess />} />
+        {/* Registration success page — guarded by sessionStorage flag */}
+        <Route
+          path="/registration-success"
+          element={
+            <RegistrationSuccessGuard>
+              <RegistrationSuccess />
+            </RegistrationSuccessGuard>
+          }
+        />
 
         {/* Admin portal */}
         <Route path="/admin/login" element={<AdminLogin />} />

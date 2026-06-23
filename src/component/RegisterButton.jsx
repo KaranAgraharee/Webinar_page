@@ -49,6 +49,8 @@ function RegistrationModal({ isOpen, onClose, webinar }) {
     if (isSuccess) {
       // Small delay so user sees the loading-to-success transition before navigating
       const t = setTimeout(() => {
+        // Set the guard flag BEFORE closing the modal and navigating
+        sessionStorage.setItem('registrationSuccess', 'true')
         onClose()
         navigate('/registration-success')
       }, 400)

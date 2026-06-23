@@ -4,8 +4,11 @@ const WHATSAPP_LINK = "https://chat.whatsapp.com/Jb9TrZILjSy0tjgQsN7rtm?s=cl&p=i
 
 export default function RegistrationSuccess() {
   const handleJoin = () => {
-    // window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
+    // Clear the guard flag — page is no longer accessible after joining
+    sessionStorage.removeItem('registrationSuccess')
+    window.open(WHATSAPP_LINK, '_blank', 'noopener,noreferrer')
   };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0B0318] via-[#14052D] to-[#22073D] flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
@@ -64,7 +67,7 @@ export default function RegistrationSuccess() {
 
         {/* Button */}
         <button
-          // onClick={handleJoin}
+          onClick={handleJoin}
           className="
             mt-8
             w-full
