@@ -121,7 +121,7 @@ function RegistrationModal({ isOpen, onClose, webinar }) {
                 ? 'Processing…'
                 : webinar?.price > 0
                   ? `Pay ${formatWebinarPrice(webinar.price)} & Register`
-                  : 'Register for Free'}
+                  : 'Pay and Register'}
             </MotionButton>
 
             <p className="reg-modal__privacy">
