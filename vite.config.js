@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   // Backend API URL — VITE_API_URL must point to the Express server, not Vite itself
-  const backendUrl = env.VITE_API_URL || 'www.'
+  const backendUrl = env.VITE_API_URL || 'www.https://teal-hummingbird-758482.hostingersite.com/'
 
   return {
     plugins: [
