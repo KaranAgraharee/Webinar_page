@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { MotionButton } from '../assets/animations/reveal.jsx'
 import { useRegisterWebinar } from '../hooks/useRegisterWebinar.js'
 import { formatWebinarPrice } from '../utils/webinar.js'
@@ -41,6 +42,19 @@ function RegistrationModal({ isOpen, onClose, webinar }) {
 
   const isLoading = status === 'loading'
   const isSuccess = status === 'success' || isRegistered
+  const navigate = useNavigate()
+
+  // Navigate to success page as soon as registration is confirmed
+  useEffect(() => {
+    if (isSuccess) {
+      // Small delay so user sees the loading-to-success transition before navigating
+      const t = setTimeout(() => {
+        onClose()
+        navigate('/registration-success')
+      }, 400)
+      return () => clearTimeout(t)
+    }
+  }, [isSuccess, navigate, onClose])
 
   return (
     <div className="reg-modal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">

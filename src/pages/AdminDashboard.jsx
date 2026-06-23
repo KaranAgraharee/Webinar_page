@@ -573,10 +573,27 @@ function WebinarsTab() {
   )
 }
 
+// ─── Hamburger Button ─────────────────────────────────────────────────────────
+function HamburgerButton({ isOpen, onClick }) {
+  return (
+    <button
+      className="admin-hamburger"
+      onClick={onClick}
+      aria-label={isOpen ? 'Close menu' : 'Open menu'}
+      aria-expanded={isOpen}
+    >
+      <span className={`admin-hamburger__line ${isOpen ? 'admin-hamburger__line--1-open' : ''}`} />
+      <span className={`admin-hamburger__line ${isOpen ? 'admin-hamburger__line--2-open' : ''}`} />
+      <span className={`admin-hamburger__line ${isOpen ? 'admin-hamburger__line--3-open' : ''}`} />
+    </button>
+  )
+}
+
 // ─── Admin Dashboard ──────────────────────────────────────────────────────────
 export default function AdminDashboard() {
   const { logout, adminEmail } = useAdmin()
   const [tab, setTab] = useState('overview')
+  const [drawerOpen, setDrawerOpen] = useState(false)
 
   // Pre-fetch stats for overview tab
   const [stats, setStats] = useState(null)
@@ -602,17 +619,42 @@ export default function AdminDashboard() {
       .catch(console.error)
   }, [])
 
+  // Close drawer on Escape key
+  useEffect(() => {
+    const handler = (e) => { if (e.key === 'Escape') setDrawerOpen(false) }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [])
+
+  // Prevent body scroll when drawer is open on mobile
+  useEffect(() => {
+    if (drawerOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [drawerOpen])
+
   const TABS = [
     { id: 'overview', icon: '📊', label: 'Overview' },
     { id: 'registrations', icon: '👥', label: 'Registrations' },
     { id: 'webinars', icon: '🎯', label: 'Webinars' },
   ]
 
+  const handleTabSelect = (id) => {
+    setTab(id)
+    setDrawerOpen(false) // close drawer on mobile when nav item selected
+  }
+
   return (
     <div className="admin-dash">
       {/* ── Header ── */}
       <header className="admin-dash__header">
         <div className="admin-dash__header-left">
+          {/* Hamburger — visible on mobile only */}
+          <HamburgerButton isOpen={drawerOpen} onClick={() => setDrawerOpen((v) => !v)} />
+
           <span className="admin-dash__logo">🛡️</span>
           <div>
             <h1 className="admin-dash__title">Admin Dashboard</h1>
@@ -628,13 +670,35 @@ export default function AdminDashboard() {
 
       {/* ── Body: Sidebar + Content ── */}
       <div className="admin-body">
-        {/* Sidebar */}
-        <nav className="admin-sidebar">
+
+        {/* Mobile backdrop */}
+        {drawerOpen && (
+          <div
+            className="admin-drawer-backdrop"
+            onClick={() => setDrawerOpen(false)}
+            aria-hidden="true"
+          />
+        )}
+
+        {/* Sidebar / Drawer */}
+        <nav className={`admin-sidebar ${drawerOpen ? 'admin-sidebar--open' : ''}`} aria-label="Dashboard navigation">
+          {/* Drawer header on mobile */}
+          <div className="admin-sidebar__drawer-header">
+            <span className="admin-sidebar__drawer-title">Navigation</span>
+            <button
+              className="admin-sidebar__drawer-close"
+              onClick={() => setDrawerOpen(false)}
+              aria-label="Close navigation"
+            >
+              ×
+            </button>
+          </div>
+
           {TABS.map((t) => (
             <button
               key={t.id}
               className={`admin-sidebar__item ${tab === t.id ? 'admin-sidebar__item--active' : ''}`}
-              onClick={() => setTab(t.id)}
+              onClick={() => handleTabSelect(t.id)}
             >
               <span className="admin-sidebar__icon">{t.icon}</span>
               <span className="admin-sidebar__label">{t.label}</span>
