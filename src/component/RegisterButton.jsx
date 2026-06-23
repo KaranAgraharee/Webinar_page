@@ -11,7 +11,25 @@ function RegistrationModal({ isOpen, onClose, webinar }) {
   const { register, status, message, isRegistered } = useRegisterWebinar()
   const [form, setForm] = useState({ name: '', phone: '', email: '' })
   const [errors, setErrors] = useState({ name: '', phone: '', email: '' })
+  const navigate = useNavigate()
 
+  const isLoading = status === 'loading'
+  const isSuccess = status === 'success' || isRegistered
+
+  // Navigate to success page as soon as registration is confirmed.
+  // This hook MUST live above any early returns (Rules of Hooks).
+  useEffect(() => {
+    if (isSuccess) {
+      const t = setTimeout(() => {
+        sessionStorage.setItem('registrationSuccess', 'true')
+        onClose()
+        navigate('/registration-success')
+      }, 400)
+      return () => clearTimeout(t)
+    }
+  }, [isSuccess, navigate, onClose])
+
+  // Early return AFTER all hooks have been called
   if (!isOpen) return null
 
   const validate = () => {
@@ -40,26 +58,9 @@ function RegistrationModal({ isOpen, onClose, webinar }) {
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: '' }))
   }
 
-  const isLoading = status === 'loading'
-  const isSuccess = status === 'success' || isRegistered
-  const navigate = useNavigate()
-
-  // Navigate to success page as soon as registration is confirmed
-  useEffect(() => {
-    if (isSuccess) {
-      // Small delay so user sees the loading-to-success transition before navigating
-      const t = setTimeout(() => {
-        // Set the guard flag BEFORE closing the modal and navigating
-        sessionStorage.setItem('registrationSuccess', 'true')
-        onClose()
-        navigate('/registration-success')
-      }, 400)
-      return () => clearTimeout(t)
-    }
-  }, [isSuccess, navigate, onClose])
-
   return (
     <div className="reg-modal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="reg-modal-title">
+
       <div className="reg-modal" onClick={(e) => e.stopPropagation()}>
         <button className="reg-modal__close" onClick={onClose} aria-label="Close">×</button>
 
