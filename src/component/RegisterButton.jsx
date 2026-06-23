@@ -141,7 +141,7 @@ function RegistrationModal({ isOpen, onClose, webinar }) {
                   : 'Pay and Register'}
             </MotionButton>
 
-            <p className="reg-modal__privacy">
+            <p className="reg-modal__privacy text-white">
               🔒 Your information is secure and will only be used for this webinar.
             </p>
           </form>
