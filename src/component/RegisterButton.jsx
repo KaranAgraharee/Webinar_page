@@ -68,7 +68,7 @@ function RegistrationModal({ isOpen, onClose, webinar }) {
           <div className="reg-modal__icon">🎓</div>
           <h2 id="reg-modal-title" className="reg-modal__title">Register for Webinar</h2>
           {webinar && (
-            <p className="reg-modal__subtitle">
+            <p className="reg-modal__subtitle text-pink-700">
               {webinar.title} · {formatWebinarPrice(webinar.price)}
             </p>
           )}
@@ -141,7 +141,7 @@ function RegistrationModal({ isOpen, onClose, webinar }) {
                   : 'Pay and Register'}
             </MotionButton>
 
-            <p className="reg-modal__privacy text-white">
+            <p className="reg-modal__privacy text-blue-700">
               🔒 Your information is secure and will only be used for this webinar.
             </p>
           </form>
