@@ -29,13 +29,14 @@ function WebinarPage() {
         <Header />
 
         <main>
-          <Hero />
+          {/* <Hero />
           <Features />
           <TruthLearn />
           <Testimonial />
           <Social_Media />
           <Faq />
-          <CtaSection />
+          <CtaSection /> */}
+          <RegistrationSuccess />
         </main>
 
         <Footer />
