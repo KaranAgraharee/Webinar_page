@@ -1,18 +1,23 @@
 export const audience = {
   banner:
-    'This webinar is specifically for married couples aged 25–55. You do not need to join together — one partner registering is completely fine. If something feels off in your marriage, this session is for you.',
-  eyebrow: 'Your future self',
+    'This free live webinar is for married individuals and couples who feel emotionally disconnected, misunderstood, or stuck in the same painful patterns. You are welcome to attend alone—your healing journey can begin with just one person.',
+
+  eyebrow: 'A New Beginning',
+
   title: 'Imagine Waking Up and Feeling...',
+
   items: [
-    'Free from the constant overthinking and replaying of conversations',
-    'Confident in your worth — without needing your partner\'s validation',
-    'Emotionally free and at peace — even in a difficult marriage',
-    'Clear about what you deserve — and how to ask for it without fear',
-    'Proud of the boundaries you hold, calmly and with love',
-    'Ready to rebuild a marriage that feels safe, seen, and real',
+    '✨ Calm instead of emotionally exhausted',
+    '💛 Confident in yourself without constantly seeking validation',
+    '🌿 Free from overthinking and replaying painful conversations',
+    '🕊️ Emotionally lighter, stronger, and more at peace',
+    '❤️ Able to communicate with clarity instead of fear or frustration',
+    '🌅 Hopeful about your marriage—and your future—once again',
   ],
+
   soloNote: {
-    emphasis: 'You don\'t have to wait for your partner to be ready.',
-    body: 'One person choosing to understand and change a pattern is enough to shift the entire dynamic of a relationship. Healing starts with you — and it can begin tonight.',
+    emphasis: 'You do not have to wait for your partner to change.',
+    body:
+      'Real transformation begins with one person choosing a different path. When you heal your thoughts, emotions, and reactions, the entire relationship can begin to shift. Your first step starts here.',
   },
 }
