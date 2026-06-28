@@ -39,7 +39,7 @@ const Hero = () => {
 
           <Reveal variant="fadeUp" animateOnMount delay={0.2}>
             <h1 className="hero-title">
-              {Heading[0]}  <span className='bg-orange-400/10 rounded-2xl'>{Heading[1]}+" "+{Heading[2]}</span>
+              {Heading[0]}  <span className='bg-orange-400/10 rounded-2xl'>{Heading[1]} {Heading[2]}</span>
             </h1>
           </Reveal>
 
