@@ -47,7 +47,7 @@ export const features = {
       icon: Cloud,
       title: "The Numbness",
       text: "Some days you feel nothing at all. No anger, no sadness, just emptiness. And that frightens you more than the fighting ever did."
-    }
+    },
   ];
 };
 export const Webinar_info = {
