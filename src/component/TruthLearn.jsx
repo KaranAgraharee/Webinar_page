@@ -1,4 +1,4 @@
-import { learnSection, truthSection } from '../assets/Constants/sections'
+import { learnSection, truthSection, truthContent  } from '../assets/Constants/sections'
 import Reveal, { StaggerItem, StaggerReveal } from '../assets/animations/reveal.jsx'
 
 const TruthLearn = () => (
@@ -11,23 +11,11 @@ const TruthLearn = () => (
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="truth-box">
-            <p>
-              Toxic patterns in marriage don&apos;t always look like shouting or abuse. Sometimes
-              they look like <strong>silence that suffocates</strong> — a partner who loves you but
-              controls, dismisses, or drains you without realising it.
-            </p>
-            <p>
-              Sometimes it looks like a cycle you keep repeating:{' '}
-              <strong>fight, forgive, repeat</strong> — without ever actually healing the wound
-              underneath. Years pass. Nothing changes.
-            </p>
-            <p>
-              These are <strong>learned patterns</strong>, often rooted in childhood, fear of
-              abandonment, or low self-worth. The good news? Patterns, once understood, can be
-              broken — even in a long marriage. That&apos;s exactly what this webinar is about.
-            </p>
-          </div>
+           <div className="truth-box">
+               {truthContent.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+                 ))}
+           </div>
         </Reveal>
       </div>
     </section>
