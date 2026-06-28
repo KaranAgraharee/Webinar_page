@@ -39,20 +39,20 @@ const Hero = () => {
 
           <Reveal variant="fadeUp" animateOnMount delay={0.2}>
             <h1 className="hero-title">
-              {Heading[0]}  <span className='bg-orange-400/10 rounded-2xl'>{Heading[1]}</span>{Heading[2]}<span className='scale-180 rotate-12 translate-2 rounded-2xl'>?</span>
+              {Heading[0]}  <span className='bg-orange-400/10 rounded-2xl'>{Heading[1]}+" "+{Heading[2]}</span>
             </h1>
           </Reveal>
 
           <Reveal variant="fadeUp" animateOnMount delay={0.3}>
-            <p className="hero-description">
-            You chose each other. But somewhere along the way, love{' '}
-              <strong className="text-highlight"> feel like pain, loneliness, and exhaustion</strong>.
-              You deserve to understand {' '} <br/>
-              <strong className="text-highlight"> why</strong>, — and {' '}
-              <strong className="text-highlight">how to heal.</strong>
-            </p>
+          <p className="hero-description">
+           Your marriage doesn't have to stay stuck forever.
+              <br />
+           Join this <strong className="text-highlight">FREE 90-minute live webinar</strong> and
+           discover why relationships lose connection, what keeps couples trapped in
+           the same painful patterns, and how healing yourself can become the first step
+          toward healing your marriage.
+          </p>
           </Reveal>
-
           <Reveal variant="fadeUp" animateOnMount delay={0.35}>
             <StaggerReveal className="key-facts" aria-label="Key webinar facts" animateOnMount>
               {KeyFacts.map(({ value, label }) => (
