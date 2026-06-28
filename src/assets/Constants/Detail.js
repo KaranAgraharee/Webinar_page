@@ -3,94 +3,103 @@ import { FaRegFaceSadCry } from "react-icons/fa6";
 import { FiFrown } from "react-icons/fi";
 import { GiSpiralShell } from "react-icons/gi";
 import { MdBattery3Bar, MdRepeat } from "react-icons/md";
+import { 
+  Anchor, 
+  MessageSquareOff, 
+  HeartCrack, 
+  Infinity, 
+  RotateCcw, 
+  Cloud 
+} from 'lucide-react';
+
 
 export const features = {
-  heading:"When Your Marriage Starts to Feel Like This. . ."
+  heading:"If You Are Reading This Right Now..."
 ,
-  sub: "In This 90-Minute Webinar, You Will Learn",
+  sub: "We wrote this for you. Because we know exactly where you are.
+",
   feats:
   [
-    {   
-        icon: GiSpiralShell,
-        title:"",
-        desc:"You overthink every conversation and replay arguments in your head endlessly"
-    },
-    {   
-        icon: MdBattery3Bar,
-        title:"",
-        desc:"You feel emotionally drained after being around your partner — not energised"
+{
+      icon: Anchor,
+      title: "The Weight of Staying",
+      text: "You want to leave but you cannot — because of your children, your family, the life you have built. So you stay. And you carry it alone."
     },
     {
-        icon: FaRegFaceSadCry,
-        title:"",
-        desc:"You've stopped sharing your feelings because \"it'll just lead to another fight\""
+      icon: MessageSquareOff,
+      title: "The Silent House",
+      text: "You have stopped fighting. You have stopped talking. You are just existing in the same house — two people sharing a roof and nothing else."
     },
     {
-        icon: FiFrown,
-        title:'',
-        desc:"You feel alone and unseen, even when you're sitting in the same room"
+      icon: HeartCrack,
+      title: "Unreachable Love",
+      text: "You love this person somewhere deep down. But you cannot reach them anymore. And you are not even sure they are trying to reach you."
     },
     {
-        icon:MdRepeat,        
-        title:'',
-        desc:"You're trapped in a fight-forgive-repeat cycle with no real resolution"
+      icon: Infinity,
+      title: "The Morning Cycle",
+      text: "Every morning you wake up and the first thought is: is this really the rest of my life? And you do not know the answer."
     },
     {
-        icon:FaHeartBroken,
-        title:'',
-        desc:'You love your partner — but this version of love is slowly breaking you'
-    }  
-    ]
+      icon: RotateCcw,
+      title: "Exhausted Options",
+      text: "You have tried everything. Conversations. Counselling. Silence. Space. Books. Nothing has lasted. Nothing has changed."
+    },
+    {
+      icon: Cloud,
+      title: "The Numbness",
+      text: "Some days you feel nothing at all. No anger, no sadness, just emptiness. And that frightens you more than the fighting ever did."
+    }
+  ];
 };
 export const Webinar_info = {
-    Date:'2026-06-27T11:30:00',
-    Duration:'90 minutes',
-    Privacy:'Confidential & Privacy-Focused Session',
-    Mode: 'Online · Join from anywhere',
-    title: 'What Happens During the Webinar',
+    Date: '2026-07-10T11:30:00',
+    Duration: '90 Minutes',
+    Privacy: '100% Private & Confidential',
+    Mode: 'Live Online • Join from Anywhere',
+    title: 'What You Will Experience',
     description:
-        'A structured 90-minute live session with Q&A — designed for working professionals with busy schedules.',
-    price: '₹33',
-    security:'🛡️ Privacy-Focused Webinar',
+        'A powerful 90-minute live webinar designed to help you understand why your marriage feels stuck, reconnect with yourself, and discover practical steps toward emotional healing.',
+    price: 'FREE',
+    security: '🔒 Safe, Private & Judgment-Free Environment',
     registerNote:
-        'Online · Either partner can join alone.· Registered attendees receive a replay link valid for 48 hours',
-}
+        'Attend from the comfort of your home. Either partner can join individually. Registered participants will receive the webinar access link via email before the event.',
+};
 
 export const Webinar_agenda = [
     {
         time: '0–10 min',
-        title: ' Welcome & Safe Space',
-        desc: 'We start by creating a safe, confidential space. No judgement — just honesty and openness.',
+        title: 'Welcome & Creating a Safe Space',
+        desc: 'Begin with a warm introduction and a confidential, judgment-free environment where you can simply listen, reflect, and feel understood.',
     },
     {
-        time: '10–20 min',
-        title: 'The 5 toxic patterns in marriage',
-        desc: "A moment to name the pain — to feel deeply seen. We look at what you've been carrying and why it makes sense."
-,
+        time: '10–25 min',
+        title: 'Why Most Marriages Stay Stuck',
+        desc: 'Discover the hidden emotional patterns that silently damage relationships and why traditional advice often fails to create lasting change.',
     },
     {
-        time: '20–40 min',        
-        title: 'The 5 Toxic Patterns in Marriage',
-        desc: 'Khushboo walks you through the most common — and most invisible — toxic dynamics that quietly erode marriages over time.',
+        time: '25–45 min',
+        title: 'The Shift Begins With You',
+        desc: 'Learn why healing yourself is the first step toward healing your relationship, even if your partner is not ready to change.',
     },
     {
-        time: '40–55 min',
-        title: 'Your Healing Toolkit',
-        desc: 'Three practical, compassionate tools you can begin using from tonight — whether or not your partner is on board.',
+        time: '45–60 min',
+        title: 'Practical Healing Tools',
+        desc: 'Receive simple yet powerful techniques you can begin using immediately to reduce conflict, improve communication, and restore emotional connection.',
     },
     {
-        time: '55–65 min',
-        title: 'Guided Meditation',
-        desc: 'A healing moment just for you. This is the part people remember most — and most webinars skip it entirely.',
+        time: '60–70 min',
+        title: 'Guided Healing Experience',
+        desc: 'Experience a calming guided meditation and emotional healing exercise designed to help you release stress and reconnect with yourself.',
     },
     {
-        time: '65–75 min',
-        title: ' Going Deeper',
-        desc: 'Khushboo shares how to continue the journey with her Relationship Guide — for those who are ready to move from understanding to real change.',
+        time: '70–80 min',
+        title: 'Your Next Step Forward',
+        desc: 'Understand how to continue your transformation beyond the webinar with practical guidance, resources, and ongoing support.',
     },
     {
-        time: '75–90 min',
-        title: 'Live Q&A with Khushboo',
-        desc: 'Ask your questions anonymously. Get personalised guidance in real time. No question is too small or too big — this is your chance to get clarity on your unique situation.',
+        time: '80–90 min',
+        title: 'Live Q&A With Khushboo',
+        desc: 'Ask your questions anonymously and receive personalised guidance during a live interactive Q&A session.',
     },
-]
+];
