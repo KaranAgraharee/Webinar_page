@@ -1,8 +1,3 @@
-import { FaHeartBroken } from "react-icons/fa";
-import { FaRegFaceSadCry } from "react-icons/fa6";
-import { FiFrown } from "react-icons/fi";
-import { GiSpiralShell } from "react-icons/gi";
-import { MdBattery3Bar, MdRepeat } from "react-icons/md";
 import { 
   Anchor, 
   MessageSquareOff, 
@@ -48,7 +43,7 @@ export const features = {
       title: "The Numbness",
       text: "Some days you feel nothing at all. No anger, no sadness, just emptiness. And that frightens you more than the fighting ever did."
     },
-  ];
+  ]
 };
 export const Webinar_info = {
     Date: '2026-07-10T11:30:00',
