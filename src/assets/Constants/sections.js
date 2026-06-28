@@ -1,40 +1,47 @@
 export const proofStats = [
-  { value: '500+', label: 'Couples helped' },
-  { value: '8+', label: 'Years of experience' },
-  { value: '97%', label: 'Attendee satisfaction' },
-  { value: '₹99', label: 'Full access' },
+  { value: '90', label: 'Minutes of Live Learning' },
+  { value: '100%', label: 'Free Registration' },
+  { value: 'Live', label: 'Interactive Q&A Session' },
+  { value: 'Private', label: 'Confidential Experience' },
 ]
 
 export const truthSection = {
-  eyebrow: 'The truth nobody tells married couples',
-  title: "It's Not Your Fault. But It Is a Pattern.",
+  eyebrow: 'The Truth That Changes Everything',
+  title: 'You Cannot Heal Your Marriage Until You Begin Healing Yourself.',
 }
 
 export const learnSection = {
-  eyebrow: "What you'll walk away with",
-  title: 'Four Shifts That Will Change Your Marriage',
+  eyebrow: "What You'll Discover",
+
+  title: 'What You Will Experience During This Webinar',
+
   description:
-    "This is not a lecture. This is a live experience designed to give you clarity, tools, and hope — in one session. Don't worry — your face and camera remain private during the session.",
+    'This is more than a webinar—it is a guided experience designed to help you understand why your relationship feels stuck, reconnect with yourself, and leave with practical tools you can begin using immediately.',
+
   items: [
     {
       num: '01',
-      title: 'Recognise the patterns',
-      desc: "Understand the specific toxic patterns that appear in married life — and why they're so hard to see from the inside.",
+      title: 'Understand Why You Feel Stuck',
+      desc:
+        'Discover the hidden emotional patterns that silently create distance, resentment, and repeated conflict in relationships.',
     },
     {
       num: '02',
-      title: 'Understand the roots',
-      desc: "Discover why you attract or stay in these dynamics — and why it has nothing to do with weakness.",
+      title: 'Reconnect With Yourself First',
+      desc:
+        'Learn why lasting change begins within you and how self-awareness becomes the foundation of a healthier marriage.',
     },
     {
       num: '03',
-      title: 'Set boundaries with love',
-      desc: 'Learn how to draw and hold healthy limits within your marriage — without guilt, fear, or conflict escalation.',
+      title: 'Learn Practical Healing Tools',
+      desc:
+        'Take away simple yet powerful techniques that improve communication, emotional connection, and inner peace—even if your partner is not ready yet.',
     },
     {
       num: '04',
-      title: 'Begin healing — now',
-      desc: 'Leave with a clear, actionable first step toward healing — whether you stay, rebuild, or are still figuring it out.',
+      title: 'Leave With Clarity & Hope',
+      desc:
+        'Walk away with a renewed perspective, greater confidence, and a clear first step toward creating the relationship you truly desire.',
     },
   ],
 }
