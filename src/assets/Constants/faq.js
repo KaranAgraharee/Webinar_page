@@ -1,44 +1,50 @@
 export const faq = [
   {
     id: 1,
-    question: 'Do both partners need to join together?',
+    question: 'What if my partner does not want to attend?',
     answer:
-      'No — either partner can join alone. In fact, many attendees come solo. The healing starts with one person deciding to understand the dynamic, and that person can be you.',
+      'You do not need your partner to be there. This session begins with you. One person changing their understanding can begin changing the entire relationship. Many people attend alone and find it even more powerful.',
   },
   {
     id: 2,
-    question: 'Will other participants be able to see my face?',
+    question: 'Is this webinar really free?',
     answer:
-      'Your privacy is protected. Participant video is displayed in a blurred format, making individual faces difficult to identify during the session.',
+      'Yes. Registration is completely FREE. There are no hidden charges or obligations. Simply reserve your seat and join the live session.',
   },
   {
     id: 3,
-    question: 'How much does the webinar cost?',
+    question: 'Is this therapy?',
     answer:
-      'The webinar is ₹99 for full access to the live session, Q&A, and key takeaway materials. Secure your seat through the registration button on this page.',
+      'No. This is a coaching and emotional healing experience designed to give you clarity, practical tools, and a new perspective. If deeper therapeutic support is needed, Khushboo will guide you toward the appropriate resources.',
   },
   {
     id: 4,
-    question: 'Is this only for people in very toxic or abusive marriages?',
+    question: 'Will anyone know I attended?',
     answer:
-      'Not at all. This webinar is for anyone who feels emotionally drained, disconnected, or stuck in patterns — even if things "look fine" from the outside. Toxicity exists on a spectrum.',
+      'No. This is a completely private and confidential session. Your registration details remain secure, and what happens during the webinar stays within the session.',
   },
   {
     id: 5,
-    question: 'Will my information be kept private?',
+    question: 'I have already tried everything. Can this still help me?',
     answer:
-      'Absolutely. Your registration details are confidential. During the Q&A, questions can be asked anonymously — your name will not be shared.',
+      'Many people feel they have tried everything because they have been trying to fix the relationship from the outside. This webinar helps you begin from the inside, where lasting change truly starts.',
   },
   {
     id: 6,
     question: "What if I can't attend live?",
     answer:
-      'Registered attendees will receive a replay link valid for 48 hours. However, the live Q&A is exclusive to those who attend in real time.',
+      'We encourage you to register anyway. You will receive updates about future sessions and follow-up resources so you do not miss the opportunity to begin your healing journey.',
   },
   {
     id: 7,
-    question: 'What happens after the webinar?',
+    question: 'Who is this webinar for?',
     answer:
-      'Khushboo will share a deeper resource — her complete Relationship Guide — for those who want to continue the healing journey beyond this session. There is no obligation.',
+      'This webinar is for married individuals or couples who feel emotionally disconnected, stuck, unheard, or uncertain about the future of their relationship. Whether you attend alone or with your partner, the journey begins with you.',
+  },
+  {
+    id: 8,
+    question: 'What will I gain from attending?',
+    answer:
+      'You will understand why your relationship feels stuck, discover hidden emotional patterns, learn practical tools to create healthier communication, experience a guided healing exercise, and leave with greater clarity, hope, and confidence.',
   },
 ]
