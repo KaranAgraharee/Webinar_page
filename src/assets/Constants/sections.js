@@ -45,3 +45,10 @@ export const learnSection = {
     },
   ],
 }
+export const truthContent = [
+  "Most couples spend years trying to fix their relationship by changing conversations, reading books, or hoping time will make things better. Yet the same arguments, distance, and disappointment keep returning.",
+
+  "The truth is, the problem is rarely just communication. It isn't even always your partner. Somewhere along the journey, you lost touch with yourself—your peace, your confidence, and your emotional connection.",
+
+  "Real healing begins when you stop asking 'How do I change my partner?' and start asking 'How do I reconnect with myself?' That's the shift this webinar will help you make."
+];
