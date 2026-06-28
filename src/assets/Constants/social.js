@@ -2,9 +2,10 @@ import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 import { MdEmail, MdSms } from 'react-icons/md'
 
 export const shareContent = {
-  title: 'Toxic Love — Webinar for Married Couples',
+  title: 'Free Live Webinar for Married Couples',
+
   message:
-    "Join me for Khushboo's live webinar on toxic patterns in marriage — understand why, and how to heal. Register here:",
+    "Sometimes the first step to healing your marriage isn't fixing your partner—it's reconnecting with yourself. Join Khushboo Khushnay's FREE live webinar and discover practical tools, emotional clarity, and a new perspective. Register here:",
 }
 
 export const getShareLinks = (fullMessage) => [
