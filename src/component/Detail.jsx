@@ -46,13 +46,14 @@ const Features = () => {
           </Reveal>
 
           <StaggerReveal className="card-grid features-grid">
-            {features.feats.map(({ icon: Icon, title: featTitle, desc }) => (
+            {features.feats.map(({ icon: Icon, title: featTitle, text }) => (
               <StaggerItem key={featTitle} variant="cardReveal">
                 <article className="card feature-card">
                   <div className="card-icon">
                     <Icon className="scale-160" />
                   </div>
-                  <p className="feature-card__text">{desc}</p>
+                <h3>{featTitle}</h3>
+                  <p className="feature-card__text">{text}</p>
                 </article>
               </StaggerItem>
             ))}
