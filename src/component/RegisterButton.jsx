@@ -175,7 +175,7 @@ const Register = ({ className = 'btn btn-primary', label, pulse = false }) => {
           disabled={webinarLoading}
           pulse={pulse}
         >
-          {buttonText}
+          Register
         </MotionButton>
       </div>
 
