@@ -14,10 +14,8 @@ import {
 
 
 export const features = {
-  heading:"If You Are Reading This Right Now..."
-,
-  sub: "We wrote this for you. Because we know exactly where you are.
-",
+  heading:"If You Are Reading This Right Now...",
+  sub: "We wrote this for you. Because we know exactly where you are.",
   feats:
   [
 {
