@@ -440,8 +440,8 @@ body{
   padding: 0 0.2em;
   
   /* Creates a modern half-height fluorescent underline accent */
-  background: linear-gradient(transparent 80%, rgba(0, 245, 0.8) 80%);
-  border:  1px dotted black;
+  background: linear-gradient(transparent 10%, rgba(0, 245, 0, 0.6) 30%);
+  border:  1px dashed black;
   border-radius: 32px;
 }
 .hero-description {
