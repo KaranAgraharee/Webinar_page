@@ -45,13 +45,16 @@ const Hero = () => {
 
           <Reveal variant="fadeUp" animateOnMount delay={0.3}>
           <p className="hero-description">
-           Your marriage doesn't have to stay stuck forever.
-              <br />
-           Join this <strong className="text-highlight">FREE 90-minute live webinar</strong> and
-           discover why relationships lose connection, what keeps couples trapped in
-           the same painful patterns, and how healing yourself can become the first step
-          toward healing your marriage.
-          </p>
+  Your marriage doesn't have to stay stuck forever.
+  <br />
+  Join this <strong>FREE 90-minute live webinar</strong> and:
+  <ul className="bullet-list">
+    <li>Discover <span className="text-highlight">why relationships lose connection</span>.</li>
+    <li>Learn what keeps couples <span className="text-highlight">trapped in the same painful patterns</span>.</li>
+    <li>See how <span className="text-highlight">healing yourself is the first step</span> toward healing your marriage.</li>
+  </ul>
+</p>
+
           </Reveal>
           <Reveal variant="fadeUp" animateOnMount delay={0.35}>
             <StaggerReveal className="key-facts" aria-label="Key webinar facts" animateOnMount>
