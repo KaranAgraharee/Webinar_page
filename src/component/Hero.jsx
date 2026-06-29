@@ -90,7 +90,7 @@ const Hero = () => {
 
         <Reveal variant="fadeRight" animateOnMount delay={0.25} className="hero-image">
           <Float className="hero-image-frame">
-            <span className="hero-image-badge">With Khushboo</span>
+            {/* <span className="hero-image-badge">With Khushboo</span> */}
             <img src="curosal.jpeg" alt={`${Heading[0]} webinar with Khushboo`} />
           </Float>
         </Reveal>
