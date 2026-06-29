@@ -435,10 +435,12 @@ body{
   color: var(--secondary);
 }
 .text-highlight {
-  color: #ffb3cc;
+  color: #ffffff;
   font-weight: 600;
-  background: linear-gradient(transparent 65%, rgba(233, 30, 99, 0.35) 65%);
-  padding: 0 0.1em;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  background: #ff13f0;
+  box-shadow: 0 0 10px #ff13f0, 0 0 20px rgba(255, 19, 240, 0.6);
 }
 
 .hero-description {
