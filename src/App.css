@@ -435,13 +435,15 @@ body{
   color: var(--secondary);
 }
 .text-highlight {
-  color: #000000; /* Dark text needed for bright green readability */
+  color: #ffffff; /* White text creates clear contrast against dark backgrounds */
   font-weight: 600;
-  padding: 0.1em 0.3em;
-  border-radius: 3px;
-  /* Ultra-bright neon green marker highlight */
-  background: #39ff14;
-  box-shadow: 0 0 8px #39ff14;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  
+  /* Vibrant premium magenta highlight */
+  background: #ff13f0; 
+  /* Ambient glowing effect */
+  box-shadow: 0 0 12px rgba(255, 19, 240, 0.45); 
 }
 
 .hero-description {
