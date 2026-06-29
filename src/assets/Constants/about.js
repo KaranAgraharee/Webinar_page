@@ -2,8 +2,8 @@ export const SPEAKER_IMAGE = '/speaker/speaker.jpg'
 
 export const Speaker = {
   name: 'Khushboo',
-  designation: 'Relationship Coach · Healer · Psychologist',
-  tags: ['Certified Psychologist', 'Relationship Coach'],
+  designation: 'Relationship Coach · Healer ',
+  tags: ['Relationship Coach'],
   bio: [
     'Khushboo has spent over 8 years helping married couples untangle the invisible threads of toxicity, pain, and disconnection that quietly erode even the most well-intentioned marriages.',
     'Her approach is grounded in psychology, compassion, and lived understanding. She doesn\'t just teach — she guides people back to themselves, and then toward each other.',
