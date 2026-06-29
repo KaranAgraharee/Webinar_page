@@ -435,17 +435,15 @@ body{
   color: var(--secondary);
 }
 .text-highlight {
-  color: #ffffff; /* White text creates clear contrast against dark backgrounds */
+  color: #ffffff;
   font-weight: 600;
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
+  padding: 0 0.2em;
   
-  /* Vibrant premium magenta highlight */
-  background: #ff13f0; 
-  /* Ambient glowing effect */
-  box-shadow: 0 0 12px rgba(255, 19, 240, 0.45); 
+  /* Creates a modern half-height fluorescent underline accent */
+  background: linear-gradient(transparent 60%, rgba(255, 19, 240, 0.8) 60%);
+  border:  2px dotted ;
+  border-radius: 32px;
 }
-
 .hero-description {
   font-size: 1.12rem;
   line-height: 1.85;
