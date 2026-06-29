@@ -48,7 +48,7 @@ const Hero = () => {
   Your marriage doesn't have to stay stuck forever.
   <br />
   Join this <strong>FREE 90-minute live webinar</strong> and:
-  <ul className="bullet-list">
+  <ul className="bullet-list list-inside list-disc">
     <li>Discover <span className="text-highlight">why relationships lose connection</span>.</li>
     <li>Learn what keeps couples <span className="text-highlight">trapped in the same painful patterns</span>.</li>
     <li>See how <span className="text-highlight">healing yourself is the first step</span> toward healing your marriage.</li>
