@@ -2,11 +2,11 @@ import {
   Testimonial as testimonials,
   getYouTubeEmbedUrl,
   testimonialNote,
-} from '../assets/Constants/testimonial'
-import Reveal, { StaggerItem, StaggerReveal } from '../assets/animations/reveal.jsx'
+} from "../assets/Constants/testimonial";
+import Reveal from "../assets/animations/reveal.jsx";
 
 const TestimonialCard = ({ id, url }) => {
-  const embedUrl = getYouTubeEmbedUrl(url)
+  const embedUrl = getYouTubeEmbedUrl(url);
 
   if (embedUrl) {
     return (
@@ -22,7 +22,7 @@ const TestimonialCard = ({ id, url }) => {
           />
         </div>
       </article>
-    )
+    );
   }
 
   return (
@@ -33,46 +33,64 @@ const TestimonialCard = ({ id, url }) => {
         rel="noopener noreferrer"
         className="testimonial-link"
       >
-        <span className="testimonial-link__icon" aria-hidden="true">
-          ▶
+        <span className="testimonial-link__icon">▶</span>
+        <span className="testimonial-link__label">
+          Watch testimonial
         </span>
-        <span className="testimonial-link__label">Watch testimonial</span>
-        <span className="testimonial-link__hint">Opens in a new tab</span>
+        <span className="testimonial-link__hint">
+          Opens in a new tab
+        </span>
       </a>
     </article>
-  )
-}
+  );
+};
 
 const Testimonial = () => {
   return (
     <section className="section section-soft" id="testimonials">
       <div className="container">
         <Reveal>
-          <span className="section-eyebrow">What past attendees say</span>
-          <h2 className="section-title">Real Stories from Real People</h2>
+          <span className="section-eyebrow">
+            What past attendees say
+          </span>
+
+          <h2 className="section-title">
+            Real Stories from Real People
+          </h2>
+
           <p className="section-subtitle">
             Hear directly from people who once felt exactly like you do now.
           </p>
         </Reveal>
 
-        <p className="testimonial-scroll-hint" aria-hidden="true">
+        <p className="testimonial-scroll-hint">
           Swipe to watch more stories →
         </p>
 
-        <StaggerReveal className="card-grid testimonial-grid">
-          {testimonials.map((item) => (
-            <StaggerItem key={item.id} variant="cardReveal">
-              <TestimonialCard id={item.id} url={item.url} />
-            </StaggerItem>
-          ))}
-        </StaggerReveal>
+        <div className="testimonial-slider">
+          <div className="testimonial-track">
+            {[...testimonials, ...testimonials].map((item, index) => (
+              <div
+                className="testimonial-item"
+                key={`${item.id}-${index}`}
+              >
+                <TestimonialCard
+                  id={item.id}
+                  url={item.url}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
 
         <Reveal delay={0.1}>
-          <p className="testimonial-note">{testimonialNote}</p>
+          <p className="testimonial-note">
+            {testimonialNote}
+          </p>
         </Reveal>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonial
+export default Testimonial;

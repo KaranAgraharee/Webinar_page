@@ -1036,6 +1036,39 @@ body{
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .testimonial-slider {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .testimonial-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: marquee 75s linear infinite;
+  }
+
+  .testimonial-track:hover,
+  .testimonial-track:active {
+    animation-play-state: paused;
+  }
+
+  .testimonial-item {
+    width: 220px;
+    flex-shrink: 0;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 0.5rem));
+    }
+  }
+}
+
 .testimonial--video {
   padding: 0;
   overflow: hidden;
